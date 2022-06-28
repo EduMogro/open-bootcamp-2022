@@ -1,7 +1,11 @@
-package Intro.Ejercicio1.Punto2;
+package Intro.Ejercicio1;
 
 public class Main {
-    
+
+    // Primera parte:
+    // Crear una función con tres parámetros que sean números que se suman entre sí.
+    // Llamar a la función en el main y darle valores.
+
     // Segunda parte:
     // Crear una clase coche.
     // Dentro de la clase coche, una variable numérica que almacene el número de puertas que tiene.
@@ -11,23 +15,28 @@ public class Main {
 
     public static void main(String[] args) {
 
+        int resultado = 0;
+        resultado = suma(10, 20, 30);
+        System.out.print("Suma: ");
+        System.out.println(resultado);
+
         Coche miCoche = new Coche();
-
         miCoche.incrementarPuertas();
-
+        miCoche.incrementarPuertas();
         int puertas = miCoche.puertas;
-
+        System.out.print("Puertas: ");
         System.out.println(puertas);
+    }
+
+    public static int suma (int a, int b, int c) {
+        return a + b + c;
     }
 }
 
-class Coche {
-    
+class Coche {    
     public int puertas = 0;
 
     public void incrementarPuertas() {
         this.puertas++;
     }
-
-
 }
